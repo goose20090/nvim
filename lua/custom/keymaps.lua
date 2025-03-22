@@ -30,3 +30,19 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- toggle git blame easier with vim fugitive
+
+-- vim.keymap.set('n', '<leader>gb', ':G blame<CR>', { silent = true, desc = 'Fugitive: Git blame' })
+local function toggle_fugitive_blame()
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    if vim.bo[buf].filetype == 'gitsigns-blame' then
+      vim.api.nvim_win_close(win, true)
+      return
+    end
+  end
+  vim.cmd 'G blame'
+end
+
+vim.keymap.set('n', '<leader>gb', toggle_fugitive_blame, { silent = true, desc = 'Toggle Fugitive Git‑blame' })
