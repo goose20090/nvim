@@ -45,3 +45,7 @@ local function toggle_file_wide_git_blame()
 end
 
 vim.keymap.set('n', '<leader>gb', toggle_file_wide_git_blame, { silent = true, desc = 'Toggle File View Git‑blame' })
+
+-- copy filepath to clipboard using autocmd
+
+vim.keymap.set('n', '<leader>cp', '<cmd>Cppath<CR>', { desc = 'Copy Absolute Filepath to Clipboard' })
