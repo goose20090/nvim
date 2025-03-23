@@ -42,7 +42,7 @@ local function toggle_fugitive_blame()
       return
     end
   end
-  vim.cmd 'G blame'
+  vim.cmd 'Gitsigns blame'
 end
 
 vim.keymap.set('n', '<leader>gb', toggle_fugitive_blame, { silent = true, desc = 'Toggle Fugitive Git‑blame' })
