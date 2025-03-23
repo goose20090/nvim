@@ -33,8 +33,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- toggle git blame easier with vim fugitive
 
--- vim.keymap.set('n', '<leader>gb', ':G blame<CR>', { silent = true, desc = 'Fugitive: Git blame' })
-local function toggle_fugitive_blame()
+local function toggle_file_wide_git_blame()
   for _, win in ipairs(vim.api.nvim_list_wins()) do
     local buf = vim.api.nvim_win_get_buf(win)
     if vim.bo[buf].filetype == 'gitsigns-blame' then
@@ -42,7 +41,7 @@ local function toggle_fugitive_blame()
       return
     end
   end
-  vim.cmd 'G blame'
+  vim.cmd 'Gitsigns blame'
 end
 
-vim.keymap.set('n', '<leader>gb', toggle_fugitive_blame, { silent = true, desc = 'Toggle Fugitive Git‑blame' })
+vim.keymap.set('n', '<leader>gb', toggle_file_wide_git_blame, { silent = true, desc = 'Toggle File View Git‑blame' })
