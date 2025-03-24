@@ -49,3 +49,10 @@ vim.keymap.set('n', '<leader>gb', toggle_file_wide_git_blame, { silent = true, d
 -- copy filepath to clipboard using autocmd
 
 vim.keymap.set('n', '<leader>cp', '<cmd>Cppath<CR>', { desc = 'Copy Absolute Filepath to Clipboard' })
+
+-- toggle autoformat on save
+
+vim.keymap.set('n', '<leader>uf', function()
+  vim.g.autoformat = not vim.g.autoformat
+  vim.notify('Autoformat is now ' .. (vim.g.autoformat and 'ON' or 'OFF'))
+end, { desc = 'Toggle Format on Save' })
