@@ -53,6 +53,11 @@ local quotes = {
     '',
     '- Daniel J. Bernstein',
   },
+  {
+    'Act. Repeat. Reverse.',
+    '',
+    '- Practical Vim',
+  },
 }
 
 return quotes
