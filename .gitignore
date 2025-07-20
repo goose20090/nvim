@@ -7,3 +7,4 @@ spell/
 lua/custom/.DS_Store
 lua/.DS_Store
 .DS_Store
+lazy-lock.json
