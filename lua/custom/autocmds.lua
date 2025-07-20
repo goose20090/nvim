@@ -14,9 +14,15 @@ vim.api.nvim_create_autocmd(
     end,
   },
 
-  vim.api.nvim_create_user_command('Cppath', function()
-    local path = vim.fn.expand '%:p'
-    vim.fn.setreg('+', path)
-    vim.notify('Copied "' .. path .. '" to the clipboard!')
-  end, {})
+  vim.api.nvim_create_user_command('CRpath', function()
+    local relative_path = vim.fn.expand '%:p:.'
+    if relative_path ~= '' then
+      vim.fn.setreg('+', relative_path)
+      vim.notify('Copied relative path: ' .. relative_path)
+    else
+      vim.notify('No file name to copy', vim.log.levels.WARN)
+    end
+  end, {
+    desc = 'Copy the relative path of the current file to the clipboard',
+  })
 )

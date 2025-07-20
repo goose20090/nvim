@@ -48,7 +48,9 @@ vim.keymap.set('n', '<leader>gb', toggle_file_wide_git_blame, { silent = true, d
 
 -- copy filepath to clipboard using autocmd
 
-vim.keymap.set('n', '<leader>cp', '<cmd>Cppath<CR>', { desc = 'Copy Absolute Filepath to Clipboard' })
+vim.keymap.set('n', '<leader>cp', '<cmd>CRpath<CR>', {
+  desc = 'Copy Relative Filepath to Clipboard',
+})
 
 -- toggle autoformat on save
 
