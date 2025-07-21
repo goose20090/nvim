@@ -17,13 +17,6 @@ return {
     },
   },
   {
-    'sphamba/smear-cursor.nvim',
-    event = 'VeryLazy',
-    opts = {
-      stiffness = 0.7,
-    },
-  },
-  {
     'dstein64/nvim-scrollview',
   },
 }
