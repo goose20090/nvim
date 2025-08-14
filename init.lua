@@ -473,3 +473,5 @@ require('nvim-ts-autotag').setup {
 }
 
 require('oil').setup()
+
+vim.g.copilot_node_command = vim.fn.expand '/Users/angusbowerbrown/.local/share/mise/installs/node/22.16.0/bin/node'
