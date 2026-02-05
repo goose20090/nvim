@@ -10,6 +10,7 @@ return {
     bigfile = { enabled = true },
     dashboard = { enabled = true },
     explorer = { enabled = true },
+    image = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
     picker = { enabled = true },
@@ -21,75 +22,15 @@ return {
     words = { enabled = true },
   },
   keys = {
-    {
-      '<leader>sf',
-      function()
-        Snacks.picker.smart()
-      end,
-      desc = 'Smart Find Files',
-    },
-    {
-      '<leader>,',
-      function()
-        Snacks.picker.buffers()
-      end,
-      desc = 'Buffers',
-    },
-    {
-      '<leader>sg',
-      function()
-        Snacks.picker.grep()
-      end,
-      desc = 'Grep',
-    },
-    {
-      '<leader>sh',
-      function()
-        Snacks.picker.command_history()
-      end,
-      desc = 'Command History',
-    },
-    {
-      '<leader>sn',
-      function()
-        Snacks.picker.notifications()
-      end,
-      desc = 'Notification History',
-    },
-    {
-      '\\',
-      function()
-        Snacks.explorer()
-      end,
-      desc = 'File Explorer',
-    },
-    {
-      '<leader>sc',
-      function()
-        Snacks.picker.colorschemes()
-      end,
-      desc = 'Colorschemes',
-    },
-    {
-      '<leader>bl',
-      function()
-        Snacks.git.blame_line()
-      end,
-      desc = '[B]lame [L]ine',
-    },
-    {
-      '<leader>lg',
-      function()
-        Snacks.lazygit.open()
-      end,
-      desc = '[L]azy [G]it',
-    },
-    {
-      '<leader>lf',
-      function()
-        Snacks.lazygit.log_file()
-      end,
-      desc = '[L]og [F]ile (with lazygit)',
-    },
+    { '<leader>sf', function() Snacks.picker.smart() end, desc = 'Smart Find Files' },
+    { '<leader>,', function() Snacks.picker.buffers() end, desc = 'Buffers' },
+    { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep' },
+    { '<leader>sh', function() Snacks.picker.command_history() end, desc = 'Command History' },
+    { '<leader>sn', function() Snacks.picker.notifications() end, desc = 'Notification History' },
+    { '\\', function() Snacks.explorer() end, desc = 'File Explorer' },
+    { '<leader>sc', function() Snacks.picker.colorschemes() end, desc = 'Colorschemes' },
+    { '<leader>bl', function() Snacks.git.blame_line() end, desc = '[B]lame [L]ine' },
+    { '<leader>lg', function() Snacks.lazygit.open() end, desc = '[L]azy [G]it' },
+    { '<leader>lf', function() Snacks.lazygit.log_file() end, desc = '[L]og [F]ile (with lazygit)' },
   },
 }
