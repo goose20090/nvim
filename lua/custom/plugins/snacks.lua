@@ -4,9 +4,6 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = { enabled = true },
     explorer = { enabled = true },
@@ -21,16 +18,25 @@ return {
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
+
   keys = {
-    { '<leader>sf', function() Snacks.picker.smart() end, desc = 'Smart Find Files' },
-    { '<leader>,', function() Snacks.picker.buffers() end, desc = 'Buffers' },
-    { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep' },
-    { '<leader>sh', function() Snacks.picker.command_history() end, desc = 'Command History' },
-    { '<leader>sn', function() Snacks.picker.notifications() end, desc = 'Notification History' },
+    -- picker
+
+    { '<leader>sf', function() Snacks.picker.smart() end, desc = '[F]iles' },
+    { '<leader>sb', function() Snacks.picker.buffers() end, desc = '[B]uffers' },
+    { '<leader>sg', function() Snacks.picker.grep() end, desc = '[G]rep' },
+    { '<leader>sh', function() Snacks.picker.command_history() end, desc = 'Command [H]istory' },
+    { '<leader>sn', function() Snacks.picker.notifications() end, desc = '[N]otification History' },
+    { '<leader>sc', function() Snacks.picker.colorschemes() end, desc = '[C]olorschemes' },
+
+    --git
+
+    { '<leader>gb', function() Snacks.git.blame_line() end, desc = '[b]lame line' },
+    { '<leader>gl', function() Snacks.lazygit.open() end, desc = '[L]azy Git' },
+    { '<leader>gf', function() Snacks.lazygit.log_file() end, desc = '[L]og [F]ile (with lazygit)' },
+
+    -- other
+
     { '\\', function() Snacks.explorer() end, desc = 'File Explorer' },
-    { '<leader>sc', function() Snacks.picker.colorschemes() end, desc = 'Colorschemes' },
-    { '<leader>bl', function() Snacks.git.blame_line() end, desc = '[B]lame [L]ine' },
-    { '<leader>lg', function() Snacks.lazygit.open() end, desc = '[L]azy [G]it' },
-    { '<leader>lf', function() Snacks.lazygit.log_file() end, desc = '[L]og [F]ile (with lazygit)' },
   },
 }

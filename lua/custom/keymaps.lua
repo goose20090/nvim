@@ -44,7 +44,7 @@ local function toggle_file_wide_git_blame()
   vim.cmd 'Gitsigns blame'
 end
 
-vim.keymap.set('n', '<leader>gb', toggle_file_wide_git_blame, { silent = true, desc = 'Toggle File View Git‑blame' })
+vim.keymap.set('n', '<leader>gB', toggle_file_wide_git_blame, { silent = true, desc = 'Toggle File View Git‑[B]lame' })
 
 -- copy filepath to clipboard using autocmd
 
@@ -54,7 +54,7 @@ vim.keymap.set('n', '<leader>cp', '<cmd>CRpath<CR>', {
 
 -- toggle autoformat on save
 
-vim.keymap.set('n', '<leader>uf', function()
+vim.keymap.set('n', '<leader>tf', function()
   vim.g.autoformat = not vim.g.autoformat
   vim.notify('Autoformat is now ' .. (vim.g.autoformat and 'ON' or 'OFF'))
-end, { desc = 'Toggle Format on Save' })
+end, { desc = '[T]oggle [F]ormat on Save' })
