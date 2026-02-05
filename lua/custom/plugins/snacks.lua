@@ -57,7 +57,7 @@ return {
       desc = 'Notification History',
     },
     {
-      '<leader>se',
+      '\\',
       function()
         Snacks.explorer()
       end,
@@ -67,6 +67,13 @@ return {
       '<leader>sc',
       function()
         Snacks.picker.colorschemes()
+      end,
+      desc = 'Colorschemes',
+    },
+    {
+      '<leader>bl',
+      function()
+        Snacks.git.colorschemes()
       end,
       desc = 'Colorschemes',
     },
