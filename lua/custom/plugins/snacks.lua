@@ -5,7 +5,6 @@ return {
   ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
-    dashboard = { enabled = true },
     explorer = { enabled = true },
     image = { enabled = true },
     indent = { enabled = true },
@@ -17,6 +16,21 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    dashboard = {
+      enabled = true,
+      sections = {
+        { section = 'header' },
+        {
+          section = 'recent_files',
+          title = 'Recents',
+          indent = 2,
+          padding = 1,
+          limit = 3,
+        },
+        { section = 'keys', title = 'Keys', indent = 2, gap = 1, padding = 1 },
+        { section = 'startup' },
+      },
+    },
   },
 
   keys = {
