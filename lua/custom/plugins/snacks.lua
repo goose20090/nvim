@@ -73,9 +73,23 @@ return {
     {
       '<leader>bl',
       function()
-        Snacks.git.colorschemes()
+        Snacks.git.blame_line()
       end,
-      desc = 'Colorschemes',
+      desc = '[B]lame [L]ine',
+    },
+    {
+      '<leader>lg',
+      function()
+        Snacks.lazygit.open()
+      end,
+      desc = '[L]azy [G]it',
+    },
+    {
+      '<leader>lf',
+      function()
+        Snacks.lazygit.log_file()
+      end,
+      desc = '[L]og [F]ile (with lazygit)',
     },
   },
 }
