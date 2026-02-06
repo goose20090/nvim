@@ -1,20 +1,4 @@
---[[
-    If you don't know anything about Lua, I recommend taking some time to read through
-    a guide. One possible example which will only take 10-15 minutes:
-      - https://learnxinyminutes.com/docs/lua/
-
-    After understanding a bit more about Lua, you can use `:help lua-guide` as a
-    reference for how Neovim integrates Lua.
-    - :help lua-guide
-    - (or HTML version): https://neovim.io/doc/user/lua-guide.html
-]]
-
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
-require 'options'
-require 'keymaps'
-require 'autocmds'
+-- Bootstrap lazy plugin manager
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
@@ -27,6 +11,19 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end ---@diagnostic disable-next-line: undefined-field
 
 vim.opt.rtp:prepend(lazypath)
+
+-- Set leaders
+
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- Load vim bindings
+
+require 'options'
+require 'keymaps'
+require 'autocmds'
+
+-- Load plugins with lazy
 
 require('lazy').setup {
 
