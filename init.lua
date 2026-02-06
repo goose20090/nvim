@@ -12,9 +12,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require 'custom/options'
-require 'custom/keymaps'
-require 'custom/autocmds'
+require 'options'
+require 'keymaps'
+require 'autocmds'
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
@@ -32,7 +32,7 @@ require('lazy').setup {
 
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
-  { import = 'custom.plugins' },
+  { import = 'plugins' },
 }
 
 local harpoon = require 'harpoon'
