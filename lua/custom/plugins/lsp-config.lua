@@ -58,6 +58,13 @@ return {
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
 
+          -- Go to definition / references (via Snacks picker)
+          map('gd', function() Snacks.picker.lsp_definitions() end, '[G]oto [D]efinition')
+          map('grr', function() Snacks.picker.lsp_references() end, '[G]oto [R]eferences')
+          map('gri', function() Snacks.picker.lsp_implementations() end, '[G]oto [I]mplementation')
+          map('grt', function() Snacks.picker.lsp_type_definitions() end, '[G]oto [T]ype Definition')
+          map('<leader>ss', function() Snacks.picker.lsp_symbols() end, '[S]earch Document [S]ymbols')
+
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
           map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -104,9 +111,7 @@ return {
           --
           -- This may be unwanted, since they displace some of your code
           if client and client:supports_method('textDocument/inlayHint', event.buf) then
-            map('<leader>th', function()
-              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
-            end, '[T]oggle Inlay [H]ints')
+            map('<leader>th', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, '[T]oggle Inlay [H]ints')
           end
         end,
       })

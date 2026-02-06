@@ -67,3 +67,6 @@ vim.opt.scrolloff = 10
 vim.opt.clipboard:append 'unnamedplus'
 
 vim.g.autoformat = true
+
+-- Trust project-local .nvim.lua files for per-project config
+vim.opt.exrc = true
