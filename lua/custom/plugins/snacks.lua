@@ -16,6 +16,12 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    gitbrowse = {
+      remote_patterns = {
+        { '^git@github%-personal:(.+)%.git$', 'https://github.com/%1' },
+        { '^git@github%-personal:(.+)$', 'https://github.com/%1' },
+      },
+    },
     dashboard = {
       enabled = true,
       sections = {
@@ -46,6 +52,7 @@ return {
     --git
 
     { '<leader>gb', function() Snacks.git.blame_line() end, desc = '[b]lame line' },
+    { '<leader>go', function() Snacks.gitbrowse.open { what = 'file' } end, desc = '[O]pen in browser' },
     { '<leader>gl', function() Snacks.lazygit.open() end, desc = '[L]azy Git' },
     { '<leader>gf', function() Snacks.lazygit.log_file() end, desc = '[L]og [F]ile (with lazygit)' },
 
