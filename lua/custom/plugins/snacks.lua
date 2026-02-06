@@ -53,7 +53,7 @@ return {
 
     { '<leader>gb', function() Snacks.git.blame_line() end, desc = '[b]lame line' },
     { '<leader>go', function() Snacks.gitbrowse.open { what = 'file' } end, desc = '[O]pen in browser' },
-    { '<leader>gl', function() Snacks.lazygit.open() end, desc = '[L]azy Git' },
+    { '<leader>lg', function() Snacks.lazygit.open() end, desc = '[L]azy [G]it' },
     { '<leader>gf', function() Snacks.lazygit.log_file() end, desc = '[L]og [F]ile (with lazygit)' },
 
     -- other
