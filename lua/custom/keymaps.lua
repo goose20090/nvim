@@ -58,3 +58,17 @@ vim.keymap.set('n', '<leader>tf', function()
   vim.g.autoformat = not vim.g.autoformat
   vim.notify('Autoformat is now ' .. (vim.g.autoformat and 'ON' or 'OFF'))
 end, { desc = '[T]oggle [F]ormat on Save' })
+
+-- toggle copilot
+vim.g.copilot_enabled = true
+vim.keymap.set('n', '<leader>tc', function()
+  if vim.g.copilot_enabled then
+    vim.cmd 'Copilot disable'
+    vim.g.copilot_enabled = false
+    vim.notify 'Copilot disabled'
+  else
+    vim.cmd 'Copilot enable'
+    vim.g.copilot_enabled = true
+    vim.notify 'Copilot enabled'
+  end
+end, { desc = '[T]oggle [C]opilot' })
