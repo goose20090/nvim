@@ -33,4 +33,6 @@ require('lazy').setup {
   checker = { enabled = true },
 }
 
+require 'toggles'
+
 vim.lsp.enable 'ruby-lsp'

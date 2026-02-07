@@ -8,12 +8,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Show [D]iagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('n', '<leader>td', function()
-  local current = vim.diagnostic.config().virtual_text
-  vim.diagnostic.config { virtual_text = not current }
-  vim.notify('Inline diagnostics ' .. (current and 'OFF' or 'ON'))
-end, { desc = '[T]oggle Inline [D]iagnostics' })
-
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -52,9 +46,3 @@ vim.keymap.set('n', '<leader>cp', '<cmd>CRpath<CR>', {
   desc = 'Copy Relative Filepath to Clipboard',
 })
 
--- toggle autoformat on save
-
-vim.keymap.set('n', '<leader>tf', function()
-  vim.g.autoformat = not vim.g.autoformat
-  vim.notify('Autoformat is now ' .. (vim.g.autoformat and 'ON' or 'OFF'))
-end, { desc = '[T]oggle [F]ormat on Save' })
