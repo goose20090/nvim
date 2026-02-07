@@ -25,6 +25,12 @@ require 'autocmds'
 
 -- Load plugins with lazy
 
-require('lazy').setup { import = 'plugins' }
+require('lazy').setup {
+  spec = {
+    { import = 'plugins' },
+  },
+  install = { colorscheme = { 'github_dark_high_contrast' } },
+  checker = { enabled = true },
+}
 
 vim.lsp.enable 'ruby-lsp'
