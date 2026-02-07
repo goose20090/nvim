@@ -4,6 +4,7 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
+    toggle = { wk_desc = { enabled = ' ', disabled = ' ' } },
     bigfile = { enabled = true },
     explorer = { enabled = true },
     image = { enabled = true },
@@ -20,6 +21,7 @@ return {
       remote_patterns = {
         { '^git@github%-personal:(.+)%.git$', 'https://github.com/%1' },
         { '^git@github%-personal:(.+)$', 'https://github.com/%1' },
+        { '^(https?://github%.com/.+)%.git$', '%1' },
       },
     },
     dashboard = {
