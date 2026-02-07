@@ -1,12 +1,16 @@
 return {
   'folke/sidekick.nvim',
+  lazy = false,
   opts = {
-    cli = {
-      mux = {
-        backend = 'zellij',
-        enabled = true,
-      },
+    nes = {
+      enabled = true,
     },
+    -- cli = {
+    --   mux = {
+    --     backend = 'zellij',
+    --     enabled = true,
+    --   },
+    -- },
   },
   keys = {
     {

@@ -31,3 +31,11 @@ Snacks.toggle
     set = function() require('copilot.suggestion').toggle_auto_trigger() end,
   })
   :map '<leader>tc'
+
+Snacks.toggle
+  .new({
+    name = 'NES',
+    get = function() return require('sidekick.nes').enabled end,
+    set = function() require('sidekick.nes').toggle() end,
+  })
+  :map '<leader>tn'
