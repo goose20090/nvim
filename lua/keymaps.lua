@@ -46,3 +46,6 @@ vim.keymap.set('n', '<leader>cp', '<cmd>CRpath<CR>', {
   desc = 'Copy Relative Filepath to Clipboard',
 })
 
+vim.keymap.set('n', '<leader>ca', '<cmd>CApath<CR>', {
+  desc = 'Copy Absolute Filepath to Clipboard',
+})
