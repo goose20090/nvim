@@ -17,6 +17,14 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    zen = {
+      enabled = true,
+      win = {
+        backdrop = {
+          transparent = false,
+        },
+      },
+    },
     gitbrowse = {
       remote_patterns = {
         { '^git@github%-personal:(.+)%.git$', 'https://github.com/%1' },
@@ -61,5 +69,6 @@ return {
     -- other
 
     { '\\', function() Snacks.explorer() end, desc = 'File Explorer' },
+    { '<leader>z', function() Snacks.zen() end, desc = '[Z]en Mode' },
   },
 }
