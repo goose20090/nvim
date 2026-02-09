@@ -9,7 +9,7 @@ return {
     npairs.setup {}
 
     npairs.add_rules {
-      Rule('<%', '%>', 'eruby'),
+      Rule('<%', ' %>', { 'eruby', 'eruby.html' }),
     }
   end,
 }

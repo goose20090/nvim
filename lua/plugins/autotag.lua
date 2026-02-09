@@ -9,6 +9,7 @@ return {
     },
     aliases = {
       ['eruby'] = 'html',
+      ['eruby.html'] = 'html',
     },
   },
 }

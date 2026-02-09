@@ -1,5 +1,5 @@
 return {
   cmd = { 'herb-language-server', '--stdio' },
-  filetypes = { 'eruby' },
+  filetypes = { 'eruby', 'eruby.html' },
   root_markers = { '.herb.yml', 'Gemfile', '.git' },
 }
