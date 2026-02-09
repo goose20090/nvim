@@ -36,3 +36,5 @@ require('lazy').setup {
 require 'toggles'
 
 vim.lsp.enable 'ruby-lsp'
+vim.lsp.enable 'herb_ls'
+vim.lsp.enable 'html-lsp'

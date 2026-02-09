@@ -7,7 +7,7 @@ return {
       install_dir = vim.fn.stdpath 'data' .. '/site',
     }
 
-    local parsers = { 'css', 'html', 'javascript', 'latex', 'norg', 'regex', 'scss', 'svelte', 'tsx', 'typst', 'vue', 'ruby' }
+    local parsers = { 'css', 'html', 'javascript', 'latex', 'norg', 'regex', 'scss', 'svelte', 'tsx', 'typst', 'vue', 'ruby', 'embedded_template' }
 
     vim.notify('Installing treesitter parsers: ' .. table.concat(parsers, ', '), vim.log.levels.INFO)
     require('nvim-treesitter').install(parsers):wait(300000)

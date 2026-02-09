@@ -1,6 +1,6 @@
 return {
 
-  filetypes = { 'ruby' },
+  filetypes = { 'ruby', 'eruby' },
 
   cmd = { 'ruby-lsp' },
 
