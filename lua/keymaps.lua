@@ -38,7 +38,7 @@ local function toggle_file_wide_git_blame()
   vim.cmd 'Gitsigns blame'
 end
 
-vim.keymap.set('n', '<leader>gB', toggle_file_wide_git_blame, { silent = true, desc = 'Toggle File View Git‑[B]lame' })
+vim.keymap.set('n', '<leader>gb', toggle_file_wide_git_blame, { silent = true, desc = 'Toggle File View Git‑[B]lame' })
 
 -- copy filepath to clipboard using autocmd
 
